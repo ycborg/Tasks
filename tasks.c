@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 int id = 0;
 // cada tarefa vai ter um id, um titulo, uma descrição e por fim um ponteiro para o proximo item da lista de tarefas
@@ -78,8 +77,7 @@ void displayTasks(Task* head) {
         printf("------------------------\n");
         current = current->next;
     }
-    // essa é uma função de biblioteca "unistd.h", ela faz com que o programa demore sleep(segundos) para a próxima ação do programa
-    sleep(2 + (id * 5));
+    system("pause");
 }
 
 int main() {
